@@ -1,0 +1,11 @@
+.navbar-nav li:not(:last-child) {
+    margin-right: 90px; /* Adjust as needed */
+    
+  }
+  .navbar {
+   
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Mynerve';
+  }
+ 

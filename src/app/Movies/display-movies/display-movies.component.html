@@ -1,0 +1,38 @@
+    <div class="ff" style="padding: 2%;">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+        @for (item of movieslist; track $index){
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl">
+                <div class="px-6 py-4">
+                    <h2 class="text-xl font-bold text-red-500">{{item?.title}}</h2>
+                    <p class="text-gray-300 mt-2">{{item?.description}}</p>
+                    <ul class="text-gray-400 mt-4">
+                        <li><strong>Year:</strong> {{item?.year}}</li>
+                        <li><strong>Rating:</strong> {{item?.rating}}/5</li>
+                        <li><strong>Duration:</strong> {{item?.duration}} h </li>
+                        <li><strong>Genre:</strong> {{item?.genre}}</li>
+                        <li><strong>Created On:</strong> {{item?.created_at}}</li>
+                    </ul>
+                </div>
+                <div class="px-6 py-4" style="margin-top: 2x;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-12" style="justify-content: center;">
+
+                            <button (click)="onDelete(item.id)" class="hover:ring-emerald-400 bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg">
+                                <i class="bi bi-trash3-fill" style="color: red;"></i> Delete
+                            </button>
+                            </div>
+                            <div class="col-md-6 col-12" style="justify-content: center;">
+
+                            <button (click)="onEdit(item.id)" class="hover:ring-emerald-400 bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg">
+                                <i class="bi bi-pencil-square" style="color: red;"></i>  Edit
+                            </button>
+                            </div>
+                        </div>
+                    
+                </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

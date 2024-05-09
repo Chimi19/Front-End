@@ -1,0 +1,49 @@
+
+@import url('https://fonts.cdnfonts.com/css/the-godfather');
+
+.carousel-item img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.moving-text {
+  animation: moveRightToLeft 15s linear infinite;
+  white-space: nowrap; 
+  overflow: visible; 
+}
+.content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.hidden-section {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Adjust timing function */
+}
+
+.visible-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Adjust timing function */
+}
+
+
+
+
+/* Define the fade-in animation */
+.fade-in {
+  opacity: 1;
+}
+
